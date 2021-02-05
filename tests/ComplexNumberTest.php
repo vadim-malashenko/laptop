@@ -44,22 +44,12 @@ class ComplexNumberTest extends TestCase
         self::assertEquals('-1-2i', new ComplexNumber(-1, -2));
     }
 
-    public function testZero(): void
-    {
-        self::assertEquals('0', ComplexNumber::create(0, 0));
-    }
-
-    public function testOne(): void
-    {
-        self::assertEquals('1+i', ComplexNumber::create(1, 1));
-    }
-
     public function testInv(): void
     {
         self::assertEquals('-1-i', ComplexNumber::create(1, 1)->inv());
     }
 
-    public function testAdd(): void
+    public function testAddSub(): void
     {
         $one = ComplexNumber::create(1, 1);
         $zero = ComplexNumber::create(0, 0);
