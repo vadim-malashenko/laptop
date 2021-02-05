@@ -16,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Laptop\\Test\\": "tests/"
+            "Laptop\\Math\\Test\\": "tests/"
         }
     },
     "scripts": {
