@@ -59,6 +59,8 @@ class ComplexNumber implements ComplexNumberInterface
             $a = (float)$a;
             return new static($this->re() * $a, $this->im() * $a);
         }
+
+        throw new \InvalidArgumentException('Expected instance of ComplexNumberInterface or numeric value');
     }
 
     public function div($a): ComplexNumberInterface
@@ -74,6 +76,8 @@ class ComplexNumber implements ComplexNumberInterface
             }
             return new static($this->re() / $a, $this->im() / $a);
         }
+
+        throw new \InvalidArgumentException('Expected instance of ComplexNumberInterface or numeric value');
     }
 
     public function __toString(): string

@@ -109,5 +109,9 @@ class ComplexNumberTest extends TestCase
         $one->div(0);
         $this->expectExceptionMessage('Division by zero');
         $one->div($zero);
+        $this->expectExceptionMessage('Expected instance of ComplexNumberInterface or numeric value');
+        $one->div('');
+        $this->expectExceptionMessage('Expected instance of ComplexNumberInterface or numeric value');
+        $one->mul('');
     }
 }
